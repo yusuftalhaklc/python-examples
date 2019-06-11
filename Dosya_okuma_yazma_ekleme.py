@@ -1,5 +1,5 @@
 # python
-Kendi Kodlarımı Paylaşıyorum...    /  YUSUF KILIÇ
+#kendi Kodlarımı Paylaşıyorum...    /  YUSUF KILIÇ
 # Yazma ------
 dosya = open ("yusuf.txt","w")
 dosya.write("Merhaba Dünya")
