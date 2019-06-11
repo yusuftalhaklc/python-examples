@@ -26,7 +26,9 @@ try:
 except FileNotFoundError:
     print("Dosya Bulunamadı.")
 # çıktı -------------
-Dosya yolunu giriniz: yazılım.txt
+"""
+Dosya yolunu giriniz: Yazılım.txt  veya  C:\Users\your_pc_name\Desktop\Yazılım.txt
 Kelimenizi giriniz: JavaScript
 Toplam karakter sayısı: 41
 2 adet ' JavaScript ' bulundu
+""
