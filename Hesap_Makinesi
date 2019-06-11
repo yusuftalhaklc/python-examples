@@ -21,13 +21,14 @@ def carpma():
     top = s1 * s2
     print("{0} * {1} = {2}".format(s1, s2, top))
 def bolme():
-    s1 = float(input("Sayı gir : "))
-    s2 = float(input(("Sayı gir : ")))
+    s1 = input("Sayı gir : ")
+    s2 = input("Sayı gir : ")
     try:
-        top = s1 / s2
+        top = float(s1) / float(s2)
         print("{0} / {1} = {2}".format(s1, s2, top))
-    except:
-        print("Sayı sıfıra bölünemez.")
+    except (ValueError,ZeroDivisionError):
+        print("Bir Hata Oluştu")
+
 
 print("1-Toplama\n2-Çıkarma\n3-Çarpma\n4-Bölme")
 secim = str(input("Seçim : "))
@@ -42,4 +43,3 @@ elif secim == "4":
        bolme()
 else:
     print("Hacker çocuk")
-
