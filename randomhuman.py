@@ -50,4 +50,20 @@ for i in range(sayı):
   cursor.execute("INSERT INTO random(İSİM,SOYİSİM,TCNO,TELEFON) VALUES (?,?,?,?)",(isim,soyisim,tcno,telefon))
   conn.commit()
 print("Veritabanına Kaydedildi.")
+# - - - - - - - E K R A N - - - Ç I K T I S I - - - - """
+- - -RASTGELE İNSAN YARAT - - -
+Kaç kişi oluşturmak istersiniz : 9
+--   İSİM - - - - -  SOYİSİM - - - - - -  TC NO - - - - - - - - - TEL NO -
+1 ) FURKAN           GENÇ              16537491230              05422364903
+2 ) NUR              BAL               11394076358              05063871564
+3 ) ALPARSLAN        KILINÇ            19356823704              05344023167
+4 ) YUSUF            YİĞİT             13418697235              05079240783
+5 ) BELİZ            VURAL             13573910264              05067043152
+6 ) AYBERK           SAĞLAM            18752139064              05353837054
+7 ) MERT             GENÇ              16943183027              05315812034
+8 ) YUNUS            GÜÇLÜ             15913360728              05065192363
+9 ) AZRA             KOÇTEKİN          13760325819              05460468523
+Veritabanına Kaydedildi.
 
+Process finished with exit code 0
+"""
