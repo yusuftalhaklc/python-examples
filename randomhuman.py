@@ -1,5 +1,3 @@
-# python
-#Kendi Kodlarımı Paylaşıyorum...    /  YUSUF KILIÇ
 import random
 import sqlite3
 
@@ -49,8 +47,7 @@ for i in range(sayı):
   print(i+1,")",isim,"            ",soyisim,"            ",tcno,"            ",telefon)
   cursor.execute("INSERT INTO random(İSİM,SOYİSİM,TCNO,TELEFON) VALUES (?,?,?,?)",(isim,soyisim,tcno,telefon))
   conn.commit()
-print("Veritabanına Kaydedildi.")
-# - - - - - - - E K R A N - - - Ç I K T I S I - - - - """
+print("Veritabanına Kaydedildi.") """
 - - -RASTGELE İNSAN YARAT - - -
 Kaç kişi oluşturmak istersiniz : 9
 --   İSİM - - - - -  SOYİSİM - - - - - -  TC NO - - - - - - - - - TEL NO -
@@ -67,3 +64,4 @@ Veritabanına Kaydedildi.
 
 Process finished with exit code 0
 """
+
