@@ -1,10 +1,11 @@
 import random
 import sqlite3
-
+import time
+import locale
 print("- - -RASTGELE İNSAN YARAT - - -")
 conn = sqlite3.connect("Randomhuman.db")
 cursor = conn.cursor()
-cursor.execute("CREATE TABLE IF NOT EXISTS random (İSİM TEXT,SOYİSİM TEXT,TCNO TEXT,TELEFON TEXT)")
+cursor.execute("CREATE TABLE IF NOT EXISTS random (İSİM TEXT,SOYİSİM TEXT,TCNO TEXT,TELEFON TEXT,TARİH TEXT)")
 
 sayı = int(input("Kaç kişi oluşturmak istersiniz : "))
 
@@ -43,23 +44,28 @@ for i in range(sayı):
   _telkod = ','.join(map(str, mixtelkod))
   telkod = _telkod.replace(',', '')
 
+  #tarih
+  locale.setlocale(locale.LC_ALL, "turkish")
+  tarih = time.strftime('%c')
+  str(tarih)
+
   telefon = "0"+telkod+telno
-  print(i+1,")",isim,"            ",soyisim,"            ",tcno,"            ",telefon)
-  cursor.execute("INSERT INTO random(İSİM,SOYİSİM,TCNO,TELEFON) VALUES (?,?,?,?)",(isim,soyisim,tcno,telefon))
+  print(i+1,")",isim,"            ",soyisim,"            ",tcno,"            ",telefon,"            ",tarih)
+  cursor.execute("INSERT INTO random(İSİM,SOYİSİM,TCNO,TELEFON,TARİH) VALUES (?,?,?,?,?)",(isim,soyisim,tcno,telefon,tarih))
   conn.commit()
 print("Veritabanına Kaydedildi.") """
 - - -RASTGELE İNSAN YARAT - - -
 Kaç kişi oluşturmak istersiniz : 9
---   İSİM - - - - -  SOYİSİM - - - - - -  TC NO - - - - - - - - - TEL NO -
-1 ) FURKAN           GENÇ              16537491230              05422364903
-2 ) NUR              BAL               11394076358              05063871564
-3 ) ALPARSLAN        KILINÇ            19356823704              05344023167
-4 ) YUSUF            YİĞİT             13418697235              05079240783
-5 ) BELİZ            VURAL             13573910264              05067043152
-6 ) AYBERK           SAĞLAM            18752139064              05353837054
-7 ) MERT             GENÇ              16943183027              05315812034
-8 ) YUNUS            GÜÇLÜ             15913360728              05065192363
-9 ) AZRA             KOÇTEKİN          13760325819              05460468523
+--   İSİM - - - - -  SOYİSİM - - - - - -  TC NO - - - - - - - - - TEL NO - - - - - - - TARİH - - -      
+1 ) FURKAN           GENÇ              16537491230              05422364903     19.06.2019 23:29:00
+2 ) NUR              BAL               11394076358              05063871564     19.06.2019 23:29:00
+3 ) ALPARSLAN        KILINÇ            19356823704              05344023167     19.06.2019 23:29:00
+4 ) YUSUF            YİĞİT             13418697235              05079240783     19.06.2019 23:29:00
+5 ) BELİZ            VURAL             13573910264              05067043152     19.06.2019 23:29:00
+6 ) AYBERK           SAĞLAM            18752139064              05353837054     19.06.2019 23:29:01
+7 ) MERT             GENÇ              16943183027              05315812034     19.06.2019 23:29:01
+8 ) YUNUS            GÜÇLÜ             15913360728              05065192363     19.06.2019 23:29:01
+9 ) AZRA             KOÇTEKİN          13760325819              05460468523     19.06.2019 23:29:01
 Veritabanına Kaydedildi.
 
 Process finished with exit code 0
