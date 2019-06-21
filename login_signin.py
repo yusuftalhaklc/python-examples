@@ -23,6 +23,7 @@ def login():
             cursor.execute("SELECT * FROM verify WHERE username = '%s'"%login)
             x = cursor.fetchone()
             print("Welcome ",x[3])
+
         else:
             print("Wrong Password.")
     else:
@@ -54,12 +55,17 @@ def sign_in():
         save = _name+" Token  = "+x
         dosya = open("Token.log", "a")
         dosya.write(save+"\n")
+        break
     elif choice == "2":
         while True:
          name = input("Name : ")
          username = input("Username : ")
+         cursor.execute("SELECT * FROM verify WHERE username = '%s'" %username)
+         data = cursor.fetchone()
          if len(username) <6:
             print("Enter more than six characters")
+         elif data:
+             print("Username already received")
          else:
              break
         while True:
