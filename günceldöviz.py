@@ -43,3 +43,25 @@ for i in range(1000):
         print("Euro Güncellendi.")
     liste[0] = dolar()
     liste[1] = euro()
+"""
+Güncel Dolar :  5.8122               Güncel Euro :  6.6189
+Güncel Dolar :  5.8122               Güncel Euro :  6.6189
+Dolar Güncellendi.
+Güncel Dolar :  5.8113               Güncel Euro :  6.6189
+Güncel Dolar :  5.8113               Güncel Euro :  6.6189
+Güncel Dolar :  5.8113               Güncel Euro :  6.6189
+Güncel Dolar :  5.8113               Güncel Euro :  6.6189
+Güncel Dolar :  5.8113               Güncel Euro :  6.6189
+Güncel Dolar :  5.8113               Güncel Euro :  6.6189
+Güncel Dolar :  5.8113               Güncel Euro :  6.6189
+Güncel Dolar :  5.8113               Güncel Euro :  6.6189
+Güncel Dolar :  5.8113               Güncel Euro :  6.6189
+Dolar Güncellendi.
+Güncel Dolar :  5.8131               Güncel Euro :  6.6191
+Güncel Dolar :  5.8131               Güncel Euro :  6.6191
+Güncel Dolar :  5.8131               Güncel Euro :  6.6191
+Güncel Dolar :  5.8131               Güncel Euro :  6.6191
+Güncel Dolar :  5.8131               Güncel Euro :  6.6191
+Güncel Dolar :  5.8131               Güncel Euro :  6.6191
+
+"""
