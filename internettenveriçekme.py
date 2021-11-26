@@ -8,12 +8,12 @@ tagImdb = BeautifulSoup(tagImdb.content,"html.parser")
 
 dataImdb = tagImdb.find_all("table",{"class":"chart full-width"})
 
-tableOfFilms = (dataImdb[0].contents) [len(dataImdb[0].contents)-2]
-tableOfFilms = tableOfFilms.find_all("tr")
+tableOfMovies = (dataImdb[0].contents) [len(dataImdb[0].contents)-2]
+tableOfMovies = tableOfMovies.find_all("tr")
 
-for film in tableOfFilms:
-    headersFılms = film.find_all("td",{"class":"titleColumn"})
-    nameOfFilm = headersFılms[0].text
-    nameOfFilm = nameOfFilm.replace("\n","")
-    print(nameOfFilm)
+for film in tableOfMovies:
+    headersMovies = film.find_all("td",{"class":"titleColumn"})
+    nameOfMovie = headersMovies[0].text
+    nameOfMovie = nameOfMovie.replace("\n","")
+    print(nameOfMovie)
     print("--------------------------------------------------------")
